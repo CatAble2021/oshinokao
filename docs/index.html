@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>CatAble-推しの顔-</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.0.0/dist/tf-backend-wasm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh@0.0.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.116.1"></script>
+<script src="./triangulation.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="text-center mb-3">
+  <a class="rogoSize"><img src="rogo.png"></a>
+</div>
+
+<!--
+<input type="file" id="example" multiple>
+
+<div id="preview"></div>
+-->
+<hr>
+<!--
+<button name="photo" value="yourself" onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color1 sub">yourself</button>
+-->
+<button name="photo" value="asuka3.JPG" onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color1 sub">斎藤飛鳥</button>
+<button name="photo" value="ikuta2.JPG" onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color2 sub">生田絵梨花</button>
+<button name="photo" value="sato.jpg" onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color3 sub">佐藤健</button>
+<button name="photo" value="tzuyu2.jpg"  onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color4 sub">ツウィ</button>
+<button name="photo" value="ojisan.jpg"  onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color5 sub">いらすとやのおじさん</button>
+<button name="photo" value="kid_job_boy_artist.jpg"  onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color6 sub">いらすとやのお兄さん</button>
+<button name="photo" value="babasense2.png"  onclick="change(this);" href="" class="btn btn-border-shadow btn-border-shadow--color7 sub">馬場先生</button>
+
+<button name="off" value="cameraoff"  onclick="change(this);"  href="" class="btn btn--off btn--cubic offSize">OFF</button>
+
+  
+<div id="main" >
+    <div class="container">
+      <div class="canvas-wrapper">
+          <canvas id="model_canvas" style="display: none;"></canvas>
+      </div>
+      <div id="threejs_canvas" style="display: none;"></div>
+      <div class="video_block" >
+        <canvas id="output"></canvas>
+        <video id="video"  playsinline style="
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          visibility: hidden;
+          width: auto;
+          height: auto;
+          ">
+        </video>
+    </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
